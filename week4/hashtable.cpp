@@ -116,6 +116,22 @@ class HashTable{
             return NULL;
         } 
     }
+
+    void remove(int key){
+        int idx = hash(key);
+        if( (buckets[idx] != NULL) && (key == buckets[idx]->regNumber) ){
+            delete buckets[idx];    // frees the memory
+            buckets[idx] = NULL;    // ReInitialize the available index to NULL 
+            size--;
+            cout<<"Data Removed from the HashTable with key: "<<key<<endl;
+        }else{
+            cout<<"Data Doesnot Exist with key "<<key<<" to Delete..."<<endl;
+        }
+    }
+
+    int* keys(){
+        // Return Array of all the Keys in the HashTable
+    }
 };
 
 int main(){
@@ -153,6 +169,8 @@ int main(){
     //table->put(s4->regNumber, s4);
 
     cout<<"Size of Hashtable is: "<<table->tableSize()<<endl;
+
+    table->remove(26);
 
     // When we iterate in a Hashtable, you will not see the data printed in the order which you added :)
     table->iterate();
