@@ -3,6 +3,8 @@
         "ostream": "cpp",
         "iostream": "cpp",
         "new": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "__tuple": "cpp",
+        "array": "cpp"
     }
 }
