@@ -96,71 +96,22 @@ void listFlights(Flight* flights, int size){
     }
 }
 
+// Implement Selection Sort for below functions fot Flights on Price and Duration :)
+
 void filterFlightsDurationLowToHight(Flight* flights, int size){
 
-    cout<<"Comparing Flights Low to High..."<<endl;
-
-    for(int idx=0; idx<size-1; idx++){
-
-        for(int cmpIdx=0; cmpIdx<size-idx-1; cmpIdx++){
-
-            // check if the current index's value is greater than the next index's value
-            if(flights[cmpIdx].duration > flights[cmpIdx+1].duration){
-                // swap the values i.e. elements of array :)
-                Flight temp = flights[cmpIdx];
-                flights[cmpIdx] = flights[cmpIdx+1];
-                flights[cmpIdx+1] = temp;
-            }
-        }
-    }
 }
 
 void filterFlightsDurationHighToLow(Flight* flights, int size){
-    for(int idx=0; idx<size-1; idx++){
-
-        for(int cmpIdx=0; cmpIdx<size-idx-1; cmpIdx++){
-
-            // check if the current index's value is greater than the next index's value
-            if(flights[cmpIdx].duration < flights[cmpIdx+1].duration){
-                // swap the values i.e. elements of array :)
-                Flight temp = flights[cmpIdx];
-                flights[cmpIdx] = flights[cmpIdx+1];
-                flights[cmpIdx+1] = temp;
-            }
-        }
-    }
+    
 }
 
 void filterFlightsPriceLowToHight(Flight* flights, int size){
-    for(int idx=0; idx<size-1; idx++){
-
-        for(int cmpIdx=0; cmpIdx<size-idx-1; cmpIdx++){
-
-            // check if the current index's value is greater than the next index's value
-            if(flights[cmpIdx].price > flights[cmpIdx+1].price){
-                // swap the values i.e. elements of array :)
-                Flight temp = flights[cmpIdx];
-                flights[cmpIdx] = flights[cmpIdx+1];
-                flights[cmpIdx+1] = temp;
-            }
-        }
-    }
+   
 }
 
 void filterFlightsPriceHighToLow(Flight* flights, int size){
-    for(int idx=0; idx<size-1; idx++){
-
-        for(int cmpIdx=0; cmpIdx<size-idx-1; cmpIdx++){
-
-            // check if the current index's value is greater than the next index's value
-            if(flights[cmpIdx].price < flights[cmpIdx+1].price){
-                // swap the values i.e. elements of array :)
-                Flight temp = flights[cmpIdx];
-                flights[cmpIdx] = flights[cmpIdx+1];
-                flights[cmpIdx+1] = temp;
-            }
-        }
-    }
+   
 }
 
 
